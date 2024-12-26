@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test_fixed_points/bloc/fixation_bloc.dart';
+import 'package:test_fixed_points/painter.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -14,52 +15,77 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Fixation points'),
+        leading: IconButton(
+            onPressed: () {
+             
+            },
+            icon: Icon(Icons.sensors)),
+        title: const Text('Fixation Points'),
         centerTitle: true,
         actions: [
           IconButton(
-              onPressed: () {
-                context.read<FixationBloc>().add(FixationEvent.clear());
-              },
-              icon: Icon(Icons.delete_rounded))
+            onPressed: () {
+              context.read<FixationBloc>().add(FixationEvent.clear());
+            },
+            icon: const Icon(Icons.delete_rounded),
+          ),
         ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            BlocBuilder<FixationBloc, FixationState>(
-              builder: (context, state) {
-                return state.maybeMap(
-                  orElse: () => Center(
-                    child: Text('Add point'),
-                  ),
-                  loadInProgress: (state) {
-                    return Center(
+            Expanded(
+              child: BlocBuilder<FixationBloc, FixationState>(
+                builder: (context, state) {
+                  return state.maybeMap(
+                    orElse: () => const Center(
+                      child: Text('Add point'),
+                    ),
+                    loadInProgress: (state) => Center(
                       child: Column(
-                        spacing: 4,
+                        mainAxisSize: MainAxisSize.min,
                         children: [
-                          CircularProgressIndicator(),
+                          const CircularProgressIndicator(),
+                          const SizedBox(height: 8),
                           Text(state.massage),
                         ],
                       ),
-                    );
-                  },
-                  fixation: (state) {
-                    return Expanded(
-                      child: ListView.builder(
-                        itemBuilder: (context, index) {
-                          return Text(
-                              'Point $index: ${state.positionsGeo[index]}');
-                        },
-                        itemCount: state.positionsGeo.length,
-                      ),
-                    );
-                  },
-                );
-              },
+                    ),
+                    fixation: (state) {
+                      return Column(
+                        children: [
+                          // CustomPaint для отрисовки линий
+                          SizedBox(
+                            width: 200,
+                            height: 150,
+                            child: DecoratedBox(
+                              decoration: BoxDecoration(color: Colors.amber),
+                              child: CustomPaint(
+                                size: Size.infinite,
+                                painter: PathPainter(state.positionsGeo),
+                              ),
+                            ),
+                          ),
+                          // Список точек
+                          Expanded(
+                            child: ListView.builder(
+                              itemCount: state.positionsGeo.length,
+                              itemBuilder: (context, index) {
+                                final position = state.positionsGeo[index];
+                                return Text(
+                                    'Point ${index + 1}: ${position.latitude}, ${position.longitude}');
+                              },
+                            ),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
+              ),
             ),
-            Spacer(),
+            const Spacer(),
             Center(
               child: ElevatedButton(
                 onPressed: () {
@@ -68,12 +94,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       .add(FixationEvent.fixationPointGeolocator());
                 },
                 style: ElevatedButton.styleFrom(
-                  shape: CircleBorder(),
-                  padding: EdgeInsets.all(100),
+                  shape: const CircleBorder(),
+                  padding: const EdgeInsets.all(100),
                   backgroundColor: Colors.orange,
                 ),
-                child: Text(
-                  'Fixation point',
+                child: const Text(
+                  'Fixation Point',
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
               ),
