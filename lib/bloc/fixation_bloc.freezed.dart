@@ -20,18 +20,21 @@ mixin _$FixationEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() fixationPointGeolocator,
     required TResult Function() fixationPointSensors,
+    required TResult Function() clear,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fixationPointGeolocator,
     TResult? Function()? fixationPointSensors,
+    TResult? Function()? clear,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fixationPointGeolocator,
     TResult Function()? fixationPointSensors,
+    TResult Function()? clear,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -40,18 +43,21 @@ mixin _$FixationEvent {
     required TResult Function(_FixationPointGeolocator value)
         fixationPointGeolocator,
     required TResult Function(_FixationPointSensors value) fixationPointSensors,
+    required TResult Function(_Clear value) clear,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FixationPointGeolocator value)? fixationPointGeolocator,
     TResult? Function(_FixationPointSensors value)? fixationPointSensors,
+    TResult? Function(_Clear value)? clear,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FixationPointGeolocator value)? fixationPointGeolocator,
     TResult Function(_FixationPointSensors value)? fixationPointSensors,
+    TResult Function(_Clear value)? clear,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -124,6 +130,7 @@ class _$FixationPointGeolocatorImpl implements _FixationPointGeolocator {
   TResult when<TResult extends Object?>({
     required TResult Function() fixationPointGeolocator,
     required TResult Function() fixationPointSensors,
+    required TResult Function() clear,
   }) {
     return fixationPointGeolocator();
   }
@@ -133,6 +140,7 @@ class _$FixationPointGeolocatorImpl implements _FixationPointGeolocator {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fixationPointGeolocator,
     TResult? Function()? fixationPointSensors,
+    TResult? Function()? clear,
   }) {
     return fixationPointGeolocator?.call();
   }
@@ -142,6 +150,7 @@ class _$FixationPointGeolocatorImpl implements _FixationPointGeolocator {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fixationPointGeolocator,
     TResult Function()? fixationPointSensors,
+    TResult Function()? clear,
     required TResult orElse(),
   }) {
     if (fixationPointGeolocator != null) {
@@ -156,6 +165,7 @@ class _$FixationPointGeolocatorImpl implements _FixationPointGeolocator {
     required TResult Function(_FixationPointGeolocator value)
         fixationPointGeolocator,
     required TResult Function(_FixationPointSensors value) fixationPointSensors,
+    required TResult Function(_Clear value) clear,
   }) {
     return fixationPointGeolocator(this);
   }
@@ -165,6 +175,7 @@ class _$FixationPointGeolocatorImpl implements _FixationPointGeolocator {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FixationPointGeolocator value)? fixationPointGeolocator,
     TResult? Function(_FixationPointSensors value)? fixationPointSensors,
+    TResult? Function(_Clear value)? clear,
   }) {
     return fixationPointGeolocator?.call(this);
   }
@@ -174,6 +185,7 @@ class _$FixationPointGeolocatorImpl implements _FixationPointGeolocator {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FixationPointGeolocator value)? fixationPointGeolocator,
     TResult Function(_FixationPointSensors value)? fixationPointSensors,
+    TResult Function(_Clear value)? clear,
     required TResult orElse(),
   }) {
     if (fixationPointGeolocator != null) {
@@ -231,6 +243,7 @@ class _$FixationPointSensorsImpl implements _FixationPointSensors {
   TResult when<TResult extends Object?>({
     required TResult Function() fixationPointGeolocator,
     required TResult Function() fixationPointSensors,
+    required TResult Function() clear,
   }) {
     return fixationPointSensors();
   }
@@ -240,6 +253,7 @@ class _$FixationPointSensorsImpl implements _FixationPointSensors {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fixationPointGeolocator,
     TResult? Function()? fixationPointSensors,
+    TResult? Function()? clear,
   }) {
     return fixationPointSensors?.call();
   }
@@ -249,6 +263,7 @@ class _$FixationPointSensorsImpl implements _FixationPointSensors {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fixationPointGeolocator,
     TResult Function()? fixationPointSensors,
+    TResult Function()? clear,
     required TResult orElse(),
   }) {
     if (fixationPointSensors != null) {
@@ -263,6 +278,7 @@ class _$FixationPointSensorsImpl implements _FixationPointSensors {
     required TResult Function(_FixationPointGeolocator value)
         fixationPointGeolocator,
     required TResult Function(_FixationPointSensors value) fixationPointSensors,
+    required TResult Function(_Clear value) clear,
   }) {
     return fixationPointSensors(this);
   }
@@ -272,6 +288,7 @@ class _$FixationPointSensorsImpl implements _FixationPointSensors {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FixationPointGeolocator value)? fixationPointGeolocator,
     TResult? Function(_FixationPointSensors value)? fixationPointSensors,
+    TResult? Function(_Clear value)? clear,
   }) {
     return fixationPointSensors?.call(this);
   }
@@ -281,6 +298,7 @@ class _$FixationPointSensorsImpl implements _FixationPointSensors {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FixationPointGeolocator value)? fixationPointGeolocator,
     TResult Function(_FixationPointSensors value)? fixationPointSensors,
+    TResult Function(_Clear value)? clear,
     required TResult orElse(),
   }) {
     if (fixationPointSensors != null) {
@@ -295,42 +313,169 @@ abstract class _FixationPointSensors implements FixationEvent {
 }
 
 /// @nodoc
+abstract class _$$ClearImplCopyWith<$Res> {
+  factory _$$ClearImplCopyWith(
+          _$ClearImpl value, $Res Function(_$ClearImpl) then) =
+      __$$ClearImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ClearImplCopyWithImpl<$Res>
+    extends _$FixationEventCopyWithImpl<$Res, _$ClearImpl>
+    implements _$$ClearImplCopyWith<$Res> {
+  __$$ClearImplCopyWithImpl(
+      _$ClearImpl _value, $Res Function(_$ClearImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FixationEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ClearImpl implements _Clear {
+  const _$ClearImpl();
+
+  @override
+  String toString() {
+    return 'FixationEvent.clear()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ClearImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fixationPointGeolocator,
+    required TResult Function() fixationPointSensors,
+    required TResult Function() clear,
+  }) {
+    return clear();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fixationPointGeolocator,
+    TResult? Function()? fixationPointSensors,
+    TResult? Function()? clear,
+  }) {
+    return clear?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fixationPointGeolocator,
+    TResult Function()? fixationPointSensors,
+    TResult Function()? clear,
+    required TResult orElse(),
+  }) {
+    if (clear != null) {
+      return clear();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FixationPointGeolocator value)
+        fixationPointGeolocator,
+    required TResult Function(_FixationPointSensors value) fixationPointSensors,
+    required TResult Function(_Clear value) clear,
+  }) {
+    return clear(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FixationPointGeolocator value)? fixationPointGeolocator,
+    TResult? Function(_FixationPointSensors value)? fixationPointSensors,
+    TResult? Function(_Clear value)? clear,
+  }) {
+    return clear?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FixationPointGeolocator value)? fixationPointGeolocator,
+    TResult Function(_FixationPointSensors value)? fixationPointSensors,
+    TResult Function(_Clear value)? clear,
+    required TResult orElse(),
+  }) {
+    if (clear != null) {
+      return clear(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Clear implements FixationEvent {
+  const factory _Clear() = _$ClearImpl;
+}
+
+/// @nodoc
 mixin _$FixationState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() fixation,
+    required TResult Function(List<Position> positionsGeo, String massage)
+        loadInProgress,
+    required TResult Function(List<Position> positionsGeo) fixation,
+    required TResult Function(String massage) failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? fixation,
+    TResult? Function(List<Position> positionsGeo, String massage)?
+        loadInProgress,
+    TResult? Function(List<Position> positionsGeo)? fixation,
+    TResult? Function(String massage)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? fixation,
+    TResult Function(List<Position> positionsGeo, String massage)?
+        loadInProgress,
+    TResult Function(List<Position> positionsGeo)? fixation,
+    TResult Function(String massage)? failure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
     required TResult Function(_Fixation value) fixation,
+    required TResult Function(_Failure value) failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
     TResult? Function(_Fixation value)? fixation,
+    TResult? Function(_Failure value)? failure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
     TResult Function(_Fixation value)? fixation,
+    TResult Function(_Failure value)? failure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -378,8 +523,8 @@ class __$$InitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
+class _$InitialImpl extends _Initial {
+  const _$InitialImpl() : super._();
 
   @override
   String toString() {
@@ -399,7 +544,10 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() fixation,
+    required TResult Function(List<Position> positionsGeo, String massage)
+        loadInProgress,
+    required TResult Function(List<Position> positionsGeo) fixation,
+    required TResult Function(String massage) failure,
   }) {
     return initial();
   }
@@ -408,7 +556,10 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? fixation,
+    TResult? Function(List<Position> positionsGeo, String massage)?
+        loadInProgress,
+    TResult? Function(List<Position> positionsGeo)? fixation,
+    TResult? Function(String massage)? failure,
   }) {
     return initial?.call();
   }
@@ -417,7 +568,10 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? fixation,
+    TResult Function(List<Position> positionsGeo, String massage)?
+        loadInProgress,
+    TResult Function(List<Position> positionsGeo)? fixation,
+    TResult Function(String massage)? failure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -430,7 +584,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
     required TResult Function(_Fixation value) fixation,
+    required TResult Function(_Failure value) failure,
   }) {
     return initial(this);
   }
@@ -439,7 +595,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
     TResult? Function(_Fixation value)? fixation,
+    TResult? Function(_Failure value)? failure,
   }) {
     return initial?.call(this);
   }
@@ -448,7 +606,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
     TResult Function(_Fixation value)? fixation,
+    TResult Function(_Failure value)? failure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -458,8 +618,188 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements FixationState {
+abstract class _Initial extends FixationState {
   const factory _Initial() = _$InitialImpl;
+  const _Initial._() : super._();
+}
+
+/// @nodoc
+abstract class _$$LoadInProgressImplCopyWith<$Res> {
+  factory _$$LoadInProgressImplCopyWith(_$LoadInProgressImpl value,
+          $Res Function(_$LoadInProgressImpl) then) =
+      __$$LoadInProgressImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<Position> positionsGeo, String massage});
+}
+
+/// @nodoc
+class __$$LoadInProgressImplCopyWithImpl<$Res>
+    extends _$FixationStateCopyWithImpl<$Res, _$LoadInProgressImpl>
+    implements _$$LoadInProgressImplCopyWith<$Res> {
+  __$$LoadInProgressImplCopyWithImpl(
+      _$LoadInProgressImpl _value, $Res Function(_$LoadInProgressImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FixationState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? positionsGeo = null,
+    Object? massage = null,
+  }) {
+    return _then(_$LoadInProgressImpl(
+      positionsGeo: null == positionsGeo
+          ? _value._positionsGeo
+          : positionsGeo // ignore: cast_nullable_to_non_nullable
+              as List<Position>,
+      massage: null == massage
+          ? _value.massage
+          : massage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$LoadInProgressImpl extends _LoadInProgress {
+  const _$LoadInProgressImpl(
+      {required final List<Position> positionsGeo, required this.massage})
+      : _positionsGeo = positionsGeo,
+        super._();
+
+  final List<Position> _positionsGeo;
+  @override
+  List<Position> get positionsGeo {
+    if (_positionsGeo is EqualUnmodifiableListView) return _positionsGeo;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_positionsGeo);
+  }
+
+  @override
+  final String massage;
+
+  @override
+  String toString() {
+    return 'FixationState.loadInProgress(positionsGeo: $positionsGeo, massage: $massage)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$LoadInProgressImpl &&
+            const DeepCollectionEquality()
+                .equals(other._positionsGeo, _positionsGeo) &&
+            (identical(other.massage, massage) || other.massage == massage));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_positionsGeo), massage);
+
+  /// Create a copy of FixationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$LoadInProgressImplCopyWith<_$LoadInProgressImpl> get copyWith =>
+      __$$LoadInProgressImplCopyWithImpl<_$LoadInProgressImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(List<Position> positionsGeo, String massage)
+        loadInProgress,
+    required TResult Function(List<Position> positionsGeo) fixation,
+    required TResult Function(String massage) failure,
+  }) {
+    return loadInProgress(positionsGeo, massage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(List<Position> positionsGeo, String massage)?
+        loadInProgress,
+    TResult? Function(List<Position> positionsGeo)? fixation,
+    TResult? Function(String massage)? failure,
+  }) {
+    return loadInProgress?.call(positionsGeo, massage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(List<Position> positionsGeo, String massage)?
+        loadInProgress,
+    TResult Function(List<Position> positionsGeo)? fixation,
+    TResult Function(String massage)? failure,
+    required TResult orElse(),
+  }) {
+    if (loadInProgress != null) {
+      return loadInProgress(positionsGeo, massage);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_Fixation value) fixation,
+    required TResult Function(_Failure value) failure,
+  }) {
+    return loadInProgress(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(_Fixation value)? fixation,
+    TResult? Function(_Failure value)? failure,
+  }) {
+    return loadInProgress?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_Fixation value)? fixation,
+    TResult Function(_Failure value)? failure,
+    required TResult orElse(),
+  }) {
+    if (loadInProgress != null) {
+      return loadInProgress(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadInProgress extends FixationState {
+  const factory _LoadInProgress(
+      {required final List<Position> positionsGeo,
+      required final String massage}) = _$LoadInProgressImpl;
+  const _LoadInProgress._() : super._();
+
+  List<Position> get positionsGeo;
+  String get massage;
+
+  /// Create a copy of FixationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$LoadInProgressImplCopyWith<_$LoadInProgressImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -467,6 +807,8 @@ abstract class _$$FixationImplCopyWith<$Res> {
   factory _$$FixationImplCopyWith(
           _$FixationImpl value, $Res Function(_$FixationImpl) then) =
       __$$FixationImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<Position> positionsGeo});
 }
 
 /// @nodoc
@@ -479,54 +821,97 @@ class __$$FixationImplCopyWithImpl<$Res>
 
   /// Create a copy of FixationState
   /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? positionsGeo = null,
+  }) {
+    return _then(_$FixationImpl(
+      positionsGeo: null == positionsGeo
+          ? _value._positionsGeo
+          : positionsGeo // ignore: cast_nullable_to_non_nullable
+              as List<Position>,
+    ));
+  }
 }
 
 /// @nodoc
 
-class _$FixationImpl implements _Fixation {
-  const _$FixationImpl();
+class _$FixationImpl extends _Fixation {
+  const _$FixationImpl({required final List<Position> positionsGeo})
+      : _positionsGeo = positionsGeo,
+        super._();
+
+  final List<Position> _positionsGeo;
+  @override
+  List<Position> get positionsGeo {
+    if (_positionsGeo is EqualUnmodifiableListView) return _positionsGeo;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_positionsGeo);
+  }
 
   @override
   String toString() {
-    return 'FixationState.fixation()';
+    return 'FixationState.fixation(positionsGeo: $positionsGeo)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$FixationImpl);
+        (other.runtimeType == runtimeType &&
+            other is _$FixationImpl &&
+            const DeepCollectionEquality()
+                .equals(other._positionsGeo, _positionsGeo));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_positionsGeo));
+
+  /// Create a copy of FixationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FixationImplCopyWith<_$FixationImpl> get copyWith =>
+      __$$FixationImplCopyWithImpl<_$FixationImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() fixation,
+    required TResult Function(List<Position> positionsGeo, String massage)
+        loadInProgress,
+    required TResult Function(List<Position> positionsGeo) fixation,
+    required TResult Function(String massage) failure,
   }) {
-    return fixation();
+    return fixation(positionsGeo);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? fixation,
+    TResult? Function(List<Position> positionsGeo, String massage)?
+        loadInProgress,
+    TResult? Function(List<Position> positionsGeo)? fixation,
+    TResult? Function(String massage)? failure,
   }) {
-    return fixation?.call();
+    return fixation?.call(positionsGeo);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? fixation,
+    TResult Function(List<Position> positionsGeo, String massage)?
+        loadInProgress,
+    TResult Function(List<Position> positionsGeo)? fixation,
+    TResult Function(String massage)? failure,
     required TResult orElse(),
   }) {
     if (fixation != null) {
-      return fixation();
+      return fixation(positionsGeo);
     }
     return orElse();
   }
@@ -535,7 +920,9 @@ class _$FixationImpl implements _Fixation {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
     required TResult Function(_Fixation value) fixation,
+    required TResult Function(_Failure value) failure,
   }) {
     return fixation(this);
   }
@@ -544,7 +931,9 @@ class _$FixationImpl implements _Fixation {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
     TResult? Function(_Fixation value)? fixation,
+    TResult? Function(_Failure value)? failure,
   }) {
     return fixation?.call(this);
   }
@@ -553,7 +942,9 @@ class _$FixationImpl implements _Fixation {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
     TResult Function(_Fixation value)? fixation,
+    TResult Function(_Failure value)? failure,
     required TResult orElse(),
   }) {
     if (fixation != null) {
@@ -563,6 +954,172 @@ class _$FixationImpl implements _Fixation {
   }
 }
 
-abstract class _Fixation implements FixationState {
-  const factory _Fixation() = _$FixationImpl;
+abstract class _Fixation extends FixationState {
+  const factory _Fixation({required final List<Position> positionsGeo}) =
+      _$FixationImpl;
+  const _Fixation._() : super._();
+
+  List<Position> get positionsGeo;
+
+  /// Create a copy of FixationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FixationImplCopyWith<_$FixationImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FailureImplCopyWith<$Res> {
+  factory _$$FailureImplCopyWith(
+          _$FailureImpl value, $Res Function(_$FailureImpl) then) =
+      __$$FailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String massage});
+}
+
+/// @nodoc
+class __$$FailureImplCopyWithImpl<$Res>
+    extends _$FixationStateCopyWithImpl<$Res, _$FailureImpl>
+    implements _$$FailureImplCopyWith<$Res> {
+  __$$FailureImplCopyWithImpl(
+      _$FailureImpl _value, $Res Function(_$FailureImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of FixationState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? massage = null,
+  }) {
+    return _then(_$FailureImpl(
+      massage: null == massage
+          ? _value.massage
+          : massage // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FailureImpl extends _Failure {
+  const _$FailureImpl({required this.massage}) : super._();
+
+  @override
+  final String massage;
+
+  @override
+  String toString() {
+    return 'FixationState.failure(massage: $massage)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FailureImpl &&
+            (identical(other.massage, massage) || other.massage == massage));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, massage);
+
+  /// Create a copy of FixationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
+      __$$FailureImplCopyWithImpl<_$FailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(List<Position> positionsGeo, String massage)
+        loadInProgress,
+    required TResult Function(List<Position> positionsGeo) fixation,
+    required TResult Function(String massage) failure,
+  }) {
+    return failure(massage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(List<Position> positionsGeo, String massage)?
+        loadInProgress,
+    TResult? Function(List<Position> positionsGeo)? fixation,
+    TResult? Function(String massage)? failure,
+  }) {
+    return failure?.call(massage);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(List<Position> positionsGeo, String massage)?
+        loadInProgress,
+    TResult Function(List<Position> positionsGeo)? fixation,
+    TResult Function(String massage)? failure,
+    required TResult orElse(),
+  }) {
+    if (failure != null) {
+      return failure(massage);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_Fixation value) fixation,
+    required TResult Function(_Failure value) failure,
+  }) {
+    return failure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(_Fixation value)? fixation,
+    TResult? Function(_Failure value)? failure,
+  }) {
+    return failure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_Fixation value)? fixation,
+    TResult Function(_Failure value)? failure,
+    required TResult orElse(),
+  }) {
+    if (failure != null) {
+      return failure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Failure extends FixationState {
+  const factory _Failure({required final String massage}) = _$FailureImpl;
+  const _Failure._() : super._();
+
+  String get massage;
+
+  /// Create a copy of FixationState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
